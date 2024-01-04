@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(underconstruction.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #redirect {
+            background-color: red;
+            color: white;
+            width: 300px;
+            padding: 30px;
+            font-size: 30px;
+            border-radius: 30px;
+            font-weight: bolder;
+            animation: blink 2s linear infinite;
+            margin-left: 68%;
+            margin-top: 4%;
+            border: black solid 3px;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #redirect:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="redirect">Do you want to take a look at semester 1?</div>
+</body>
+<script>
+    var redirect1 = document.getElementById('redirect');
+    redirect1.addEventListener('click', function (e) {
+        window.location = "sem1.html";
+    });
+</script>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>storing</title>
+</head>
+<style>
+    #all_results {
+        width: 70%;
+        border: black solid 1px;
+        margin: 10% 10%;
+
+    }
+
+    #all_results tr {
+        text-align: center;
+
+    }
+</style>
+
+<body>
+    <div id="History_stored" class="form">
+        <table id="all_results" border="black solid 1px">
+            <thead>
+                <tr>
+                    <th>Roll Number</th>
+                    <th>Name</th>
+                    <th>SGPA</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+        <form>
+            <input type="text" id="naming" placeholder="name">
+            <input type="text" id="USN_mension" placeholder="USN">
+            <button id="submit-btn">See History</button>
+            <input type="button" id="delete-btn" value="delete">
+        </form>
+    </div>
+
+        <script>
+            const sgpa = 20;
+            const tableBody = document.getElementById('table-body');
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.addEventListener('click', (event) => {
+                //event.preventDefault(); // Prevent form submission
+
+                const name = document.getElementById('naming').value;
+                const USN = document.getElementById('USN_mension').value;
+
+                // Retrieve existing data from localStorage
+                const existingData = JSON.parse(localStorage.getItem('tableData')) || [];
+
+                // Add new data to existing data
+                const newData = {
+                    Roll: USN,
+                    Name: name,
+                    SGPA: sgpa
+                };
+                existingData.push(newData);
+
+                // Store data in localStorage
+                localStorage.setItem('tableData', JSON.stringify(existingData));
+
+                // Update table
+                updateTable();
+            });
+
+            function updateTable() {
+                let html = '';
+                const tableData = JSON.parse(localStorage.getItem('tableData')) || [];
+                for (const data of tableData) {
+                    html += `<tr><td>${data.Roll}</td><td>${data.Name}</td><td style="font-weight:bold; font-size:30px;">${data.SGPA}</td></tr>`;
+                }
+                tableBody.innerHTML = html;
+            }
+
+            // Load existing data on page load
+            window.addEventListener('load', updateTable);
+
+            var del = document.getElementById('delete-btn');
+            del.addEventListener('click', (event) => {
+                value = confirm("Do you want to loose the stored data?");
+                if (value) {
+                    localStorage.clear();
+                }
+                location.reload();
+            })
+
+        </script>
+    
+</body>
+
+</html>

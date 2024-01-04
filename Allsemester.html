@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Semester</title>
+    <style>
+        #contain_choose_sem {
+            height: 200px;
+            background: linear-gradient(to top, rgb(203, 203, 8), white, rgb(166, 166, 4));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px rgba(1, 1, 1, 0.5);
+            border-radius: 20px;
+            justify-content: safe;
+            padding: 0px 10% 0px 10%;
+        }
+
+        .sem_name {
+            background-color: blue;
+            padding: 20px;
+            background: linear-gradient(to top, rgb(1, 1, 10), rgb(24, 26, 152), rgb(1, 1, 13));
+            border-radius: 10px;
+        }
+
+        .sem_name:hover {
+            cursor: pointer;
+        }
+
+        #sem_elements {
+            background-color: beige;
+            border-radius: 30px;
+            text-align: center;
+            color: white;
+        }
+        #home_index{
+            background-color: blanchedalmond;
+            border: black solid 2px;
+            border-radius: 50%;
+            padding: 20px;
+            height: auto;
+            width: 110px;
+            margin-right: 10%;
+        }
+        #home_index:hover{
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contain_choose_sem">
+        <h3 id="home_index">HOME</h3>
+        <h1 id="choose_sem">Choose Your Semester</h1>
+    </div>
+    <div id="sem_elements">
+        <h1 id="sem_1" class="sem_name">First Semester</h1>
+        <h1 id="sem_2" class="sem_name">Second Semester</h1>
+        <h1 id="sem_3" class="sem_name">Third Semester</h1>
+        <h1 id="sem_4" class="sem_name">Fourth Semester</h1>
+    </div>
+    <script>
+        var sem1 = document.getElementById('sem_1');
+        var sem2 = document.getElementById('sem_2');
+        var sem3 = document.getElementById('sem_3');
+        var sem4 = document.getElementById('sem_4');
+        sem1.addEventListener('click', function (e) {
+            window.location = "sem1.html";
+        });
+        sem2.addEventListener('click', function (e) {
+        
+            window.location = "under_construction.html";
+        });
+        sem3.addEventListener('click', function (e) {
+            window.location = "under_construction.html";
+        });
+        sem4.addEventListener('click', function (e) {
+            window.location = "under_construction.html";
+        });
+        var home=document.getElementById('home_index');
+        home.addEventListener('click',function(e){
+            window.location = 'index.html';
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+body {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.header_update{
+    position: fixed;
+    width: 100%;
+    transition: 0.5s;
+}
+.header_update {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+}
+#header_update0 {
+    left: 2000px;
+}
+#header_update1 {
+    left: 2000px;
+}
+
+#subject_details {
+    display: flex;
+    font-size: 0.8em;
+    justify-content: space-between;
+    padding: 0 40px;
+    background-color: orange;
+    margin: 30px;
+    border-radius: 15px;
+    box-shadow: inset;
+}
+
+#input_marks{
+    
+    margin-left: 25%;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#input_marks tr{
+    padding-bottom: 20px;
+    height: 61px;
+}
+.inputbox {
+    margin-left: 30px;
+    width: 80%;
+    height: 30px;
+    border: black solid 2px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.button_holder {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 30px;
+    padding: 0 40px;
+}
+
+.nav_button {
+    background: linear-gradient(to top, orange, rgb(232, 232, 238));
+    padding: 8px;
+    box-shadow: inset;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.nav_button:hover{
+    cursor: pointer;
+}
+
+#py{
+    left: 2000px;
+}
+#CM{
+    left: 2000px;
+}
+#CO{
+    left: 2000px;
+}
+#OSU{
+    left: 2000px;
+}
+#DS{
+    left: 2000px;
+}
+#PCE{
+    left: 2000px;
+}
+#WP{
+    left: 2000px;
+}
+#BC{
+    left: 2000px;
+}
+
+
+#grades{
+    left: 2000px;
+    margin-left: 20px;
+}
+
+#History_stored{
+    left: 2000px;
+    overflow: auto;
+    position: fixed;
+}
+
+.form{
+    position: fixed;
+    transition: 0.5s;
+    width: 100%;
+    margin-top: 110px;
+}
+#Intro{
+    position: fixed;
+    transition: 0.5s;
+    width: 100%;
+    margin-top: 300px;
+}
+
+#marks_card{
+    width: 96%;
+    text-align: center;
+    
+    border-collapse: collapse;
+}
+#personal_details{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 4.5%;
+    font-size: 20px;
+    font-weight: bold;
+}
+tr{
+    height: 30px;
+}
+
+#all_results {
+    width: 70%;
+    border: black solid 1px;
+    margin: 10% 10%;
+
+}
+
+#all_results tr {
+    text-align: center;
+
+}
